@@ -4,23 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Adaptive English Teacher</title>
-  <meta name="description" content="Adaptive English Teacher — learn English with an adaptive, Duolingo-inspired experience (blue theme)." />
+  <meta name="description" content="Duolingo-inspired blue landing page for Adaptive English Teacher (Reading, Vocab, Tests, Writing, Speaking, Chat, Stats)." />
 
   <style>
     :root{
-      /* Blue-first, Duolingo-ish vibe (rounded, bright, friendly) */
-      --bg: #F3F8FF;          /* page background */
-      --surface: #FFFFFF;     /* card */
-      --surface2:#EAF3FF;     /* soft panel */
+      --bg: #F3F8FF;
+      --surface: #FFFFFF;
+      --surface2:#EAF3FF;
       --stroke: rgba(7, 20, 43, .10);
       --text: #07142B;
       --muted: rgba(7, 20, 43, .66);
 
-      --blue: #1C7DFF;        /* primary */
-      --blue2:#0A5BFF;        /* hover/deeper */
-      --cyan: #22D3EE;        /* accent */
-      --orange:#FF9F1C;       /* accent */
-      --purple:#7C5CFF;       /* accent */
+      --blue: #1C7DFF;
+      --blue2:#0A5BFF;
+      --cyan: #22D3EE;
+      --orange:#FF9F1C;
+      --purple:#7C5CFF;
+      --green:#34D399;
 
       --shadow: 0 18px 44px rgba(7,20,43,.12);
       --shadow2: 0 10px 22px rgba(7,20,43,.10);
@@ -42,20 +42,19 @@
     }
 
     a{ color: inherit; }
-
     .wrap{
       width: min(1120px, 92vw);
       margin: 0 auto;
       padding: 26px 0 56px;
     }
 
-    /* nav */
+    /* NAV */
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
-      padding: 10px 0 24px;
+      padding: 10px 0 18px;
       flex-wrap: wrap;
     }
     .brand{
@@ -72,6 +71,7 @@
       background: linear-gradient(180deg, var(--blue), var(--blue2));
       box-shadow: 0 10px 18px rgba(28,125,255,.25);
       position: relative;
+      flex: 0 0 auto;
     }
     .logo::before{
       content:"";
@@ -83,10 +83,10 @@
     }
     .navlinks{
       display:flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap:wrap;
       color: rgba(7,20,43,.78);
-      font-weight: 800;
+      font-weight: 850;
       font-size: 14px;
     }
     .navlinks a{
@@ -96,7 +96,7 @@
     }
     .navlinks a:hover{ background: rgba(7,20,43,.05); }
 
-    /* buttons */
+    /* Buttons */
     .btn{
       appearance:none;
       border: 2px solid rgba(7,20,43,.10);
@@ -123,13 +123,12 @@
       border-color: rgba(7,20,43,.06);
     }
     .btn.primary:hover{ filter: brightness(1.02); }
-
     .btn.ghost{ background: rgba(255,255,255,.75); }
 
     .icon{ width:18px; height:18px; display:inline-block; }
     .icon svg{ width:100%; height:100%; }
 
-    /* hero */
+    /* HERO */
     .hero{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -137,7 +136,6 @@
       align-items: stretch;
       margin-top: 6px;
     }
-
     .card{
       background: var(--surface);
       border: 2px solid rgba(7,20,43,.10);
@@ -146,7 +144,6 @@
       overflow:hidden;
       position: relative;
     }
-
     .heroLeft{
       padding: clamp(22px, 4vw, 44px);
       display:flex;
@@ -186,7 +183,7 @@
       line-height: 1.6;
       color: var(--muted);
       max-width: 70ch;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .heroActions{
@@ -210,7 +207,7 @@
       border-radius: 999px;
       background: rgba(7,20,43,.04);
       border: 2px solid rgba(7,20,43,.08);
-      font-weight: 900;
+      font-weight: 950;
       font-size: 13px;
       color: rgba(7,20,43,.78);
     }
@@ -222,7 +219,7 @@
     .sq.o{ background: var(--orange); }
     .sq.p{ background: var(--purple); }
 
-    /* hero right */
+    /* Hero Right (feature preview) */
     .heroRight{
       padding: 18px;
       display:flex;
@@ -245,8 +242,8 @@
     }
     .bubble span{
       display:block;
-      color: rgba(7,20,43,.70);
-      font-weight: 750;
+      color: rgba(7,20,43,.72);
+      font-weight: 800;
       line-height:1.4;
       font-size: 13px;
     }
@@ -286,7 +283,7 @@
       white-space: nowrap;
     }
 
-    /* sections */
+    /* Sections */
     .section{
       margin-top: 18px;
       padding: 26px;
@@ -295,12 +292,12 @@
       margin:0 0 10px 0;
       font-size: 22px;
       letter-spacing:-.02em;
-      font-weight: 950;
+      font-weight: 980;
     }
     .sectionDesc{
       margin:0 0 16px 0;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 760;
       line-height: 1.6;
     }
 
@@ -309,9 +306,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
-
     .feature{
-      background: rgba(255,255,255,.90);
+      background: rgba(255,255,255,.92);
       border: 2px solid rgba(7,20,43,.08);
       border-radius: 18px;
       padding: 16px;
@@ -323,34 +319,37 @@
       gap:8px;
       padding: 8px 10px;
       border-radius: 999px;
-      font-weight: 950;
+      font-weight: 980;
       font-size: 12px;
       background: rgba(34,211,238,.14);
       border: 2px solid rgba(34,211,238,.16);
     }
     .feature .badge2.b{ background: rgba(28,125,255,.14); border-color: rgba(28,125,255,.16); }
     .feature .badge2.o{ background: rgba(255,159,28,.16); border-color: rgba(255,159,28,.18); }
+    .feature .badge2.p{ background: rgba(124,92,255,.14); border-color: rgba(124,92,255,.16); }
+    .feature .badge2.g{ background: rgba(52,211,153,.16); border-color: rgba(52,211,153,.18); }
     .feature h3{
       margin: 10px 0 6px;
       font-size: 16px;
-      font-weight: 950;
+      font-weight: 980;
       letter-spacing:-.02em;
     }
     .feature p{
       margin:0;
-      color: rgba(7,20,43,.70);
-      font-weight: 700;
+      color: rgba(7,20,43,.72);
+      font-weight: 760;
       line-height: 1.55;
       font-size: 14px;
     }
 
+    /* How it works */
     .steps{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
     .step{
-      background: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.92);
       border: 2px solid rgba(7,20,43,.08);
       border-radius: 18px;
       padding: 16px;
@@ -361,17 +360,42 @@
       border-radius: 14px;
       display:grid;
       place-items:center;
-      font-weight: 950;
+      font-weight: 980;
       background: rgba(28,125,255,.14);
       border: 2px solid rgba(28,125,255,.16);
       margin-bottom: 10px;
     }
-    .step strong{ font-weight: 950; display:block; margin-bottom: 6px; }
-    .step span{ color: rgba(7,20,43,.70); font-weight: 700; line-height:1.5; font-size: 14px; display:block; }
+    .step strong{ font-weight: 980; display:block; margin-bottom: 6px; }
+    .step span{ color: rgba(7,20,43,.72); font-weight: 760; line-height:1.5; font-size: 14px; display:block; }
+
+    /* CTA strip */
+    .ctaStrip{
+      margin-top: 18px;
+      padding: 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      background: linear-gradient(90deg, rgba(28,125,255,.10), rgba(34,211,238,.08));
+      border: 2px solid rgba(7,20,43,.10);
+      border-radius: 20px;
+      box-shadow: var(--shadow2);
+      flex-wrap: wrap;
+    }
+    .ctaStrip strong{
+      font-weight: 980;
+      letter-spacing:-.02em;
+    }
+    .ctaStrip span{
+      display:block;
+      color: rgba(7,20,43,.70);
+      font-weight: 760;
+      margin-top: 4px;
+    }
 
     /* FAQ */
     details{
-      background: rgba(255,255,255,.90);
+      background: rgba(255,255,255,.92);
       border: 2px solid rgba(7,20,43,.08);
       border-radius: 18px;
       padding: 14px 16px;
@@ -379,20 +403,20 @@
     }
     summary{
       cursor:pointer;
-      font-weight: 950;
+      font-weight: 980;
       list-style:none;
     }
     summary::-webkit-details-marker{ display:none; }
     details p{
       margin: 10px 0 0;
-      color: rgba(7,20,43,.70);
-      font-weight: 700;
+      color: rgba(7,20,43,.72);
+      font-weight: 760;
       line-height:1.55;
       font-size: 14px;
     }
     .faq{ display:grid; gap: 10px; }
 
-    /* footer */
+    /* Footer */
     .footer{
       margin-top: 18px;
       display:flex;
@@ -400,7 +424,7 @@
       align-items:center;
       justify-content: space-between;
       color: rgba(7,20,43,.60);
-      font-weight: 700;
+      font-weight: 760;
       padding: 10px 4px 0;
       flex-wrap:wrap;
     }
@@ -415,6 +439,7 @@
       .hero{ grid-template-columns: 1fr; }
       .grid3, .steps{ grid-template-columns: 1fr; }
       .btn{ width: 100%; justify-content:center; }
+      .ctaStrip{ justify-content:flex-start; }
     }
   </style>
 </head>
@@ -440,17 +465,20 @@
     <!-- HERO -->
     <section class="hero">
       <div class="card heroLeft">
-        <div class="tag"><span class="dot" aria-hidden="true"></span>Blue theme • Duolingo-style experience</div>
+        <div class="tag"><span class="dot" aria-hidden="true"></span>Duolingo vibe · Blue theme · Adaptive learning</div>
 
-        <h1>Learn English. <br/>Stay consistent.</h1>
+        <h1>Read. Learn. Test.<br/>Write & Speak.</h1>
 
         <p class="sub">
-          A dedicated English learning app that adapts to your level and your mistakes —
-          so you practice what matters, not random drills.
+          A complete English learning loop powered by your real progress:
+          personalized article recommendations, smart highlights + translation,
+          vocabulary book + quizzes, auto-generated reading tests,
+          IELTS-style writing & speaking evaluation, scenario-based chat,
+          and a clean stats dashboard.
         </p>
 
         <div class="heroActions">
-          <!-- Replace with your GitHub repo link -->
+          <!-- TODO: Replace with your GitHub repo link -->
           <a class="btn primary" href="https://github.com/yourname/yourrepo" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -460,7 +488,7 @@
             GitHub Repository
           </a>
 
-          <!-- Replace with your PDF link -->
+          <!-- TODO: Replace with your PDF file name/path -->
           <a class="btn" href="./Adaptive-English-Teacher-User-Guide.pdf" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -473,24 +501,24 @@
         </div>
 
         <div class="mini" aria-label="Highlights">
-          <div class="pill"><span class="sq" aria-hidden="true"></span>Adaptive review</div>
-          <div class="pill"><span class="sq o" aria-hidden="true"></span>Daily streak</div>
-          <div class="pill"><span class="sq p" aria-hidden="true"></span>Progress stats</div>
+          <div class="pill"><span class="sq" aria-hidden="true"></span>Recommendations</div>
+          <div class="pill"><span class="sq o" aria-hidden="true"></span>Tests & scoring</div>
+          <div class="pill"><span class="sq p" aria-hidden="true"></span>Writing & speaking coach</div>
         </div>
       </div>
 
       <div class="card heroRight" aria-label="Preview">
         <div class="bubble">
           <strong>Today’s plan</strong>
-          <span>8 min • weak grammar + common phrases</span>
+          <span>1 article · 1 vocab quiz · 5 min writing · 5 min speaking</span>
         </div>
         <div class="bubble">
-          <strong>Instant feedback</strong>
-          <span>Corrections + short explanations you’ll remember</span>
+          <strong>Learn while you read</strong>
+          <span>Vocabulary / collocations / grammar highlights + one-tap translation</span>
         </div>
         <div class="bubble">
-          <strong>Smart review</strong>
-          <span>Spaced repetition — review only when you’re about to forget</span>
+          <strong>Instant evaluation</strong>
+          <span>Cloze & True/False tests + IELTS-style writing and speaking feedback</span>
         </div>
 
         <div class="progress">
@@ -502,42 +530,73 @@
 
     <!-- FEATURES -->
     <section id="features" class="card section" aria-label="Features">
-      <h2 class="sectionTitle">Features</h2>
+      <h2 class="sectionTitle">Core features</h2>
       <p class="sectionDesc">
-        Friendly motivation + a more “teacher-like” adaptive loop.
+        Built on a complete backend: discovery & recommendation, reading highlights, vocabulary system,
+        auto-generated tests, AI writing/speaking evaluation, chat practice, and stats.
       </p>
 
       <div class="grid3">
         <div class="feature">
-          <div class="badge2 b">Adaptive</div>
-          <h3>Personalized practice</h3>
-          <p>Difficulty and topics adjust based on your mistakes and learning speed.</p>
-        </div>
-        <div class="feature">
-          <div class="badge2">Feedback</div>
-          <h3>Instant corrections</h3>
-          <p>Clear rewrites + concise explanations (no long boring grammar lectures).</p>
-        </div>
-        <div class="feature">
-          <div class="badge2 o">Habit</div>
-          <h3>Daily streak system</h3>
-          <p>Small daily sessions that keep you consistent and motivated.</p>
+          <div class="badge2 b">Discover</div>
+          <h3>Interest-based recommendations</h3>
+          <p>Discover new articles by topic, then get hybrid recommendations and similar-article suggestions.</p>
         </div>
 
         <div class="feature">
-          <div class="badge2">Review</div>
-          <h3>Spaced repetition</h3>
-          <p>Review at the right time — when you’re about to forget — not randomly.</p>
+          <div class="badge2">Reading</div>
+          <h3>Highlights + one-tap translation</h3>
+          <p>Vocabulary, collocations, and grammar highlights. Translation uses Gemini first, with reliable fallback.</p>
         </div>
+
         <div class="feature">
-          <div class="badge2 b">Tracking</div>
+          <div class="badge2 o">Vocabulary</div>
+          <h3>Wordbook + standard lists</h3>
+          <p>Save words with definitions/examples/translations. Learn from CET4/CET6/SAT lists + quizzes.</p>
+        </div>
+
+        <div class="feature">
+          <div class="badge2 p">Reading Tests</div>
+          <h3>Auto-generated quizzes</h3>
+          <p>Cloze and True/False questions generated from articles, with instant scoring and history tracking.</p>
+        </div>
+
+        <div class="feature">
+          <div class="badge2 g">Writing Coach</div>
+          <h3>IELTS + general scoring</h3>
+          <p>Strict IELTS criteria scoring + practical writing quality score, plus an improved version and saved history.</p>
+        </div>
+
+        <div class="feature">
+          <div class="badge2 b">Speaking Coach</div>
+          <h3>Whisper STT + IELTS feedback</h3>
+          <p>Speech-to-text transcription and IELTS-style feedback across fluency, vocabulary, and grammar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE -->
+    <section class="card section" aria-label="More Features">
+      <h2 class="sectionTitle">What makes it feel like a real product</h2>
+      <p class="sectionDesc">Scenario chat, level estimation, stats dashboard, and optional cover images for articles.</p>
+
+      <div class="grid3">
+        <div class="feature">
+          <div class="badge2 o">English Pilot</div>
+          <h3>Scenario-based chat practice</h3>
+          <p>Practice real-life conversations with CEFR-level adaptive replies, tips, and follow-up prompts.</p>
+        </div>
+
+        <div class="feature">
+          <div class="badge2">CEFR</div>
+          <h3>Proficiency estimation</h3>
+          <p>Estimate CEFR level from your reading and vocabulary progress (LLM-enhanced when available).</p>
+        </div>
+
+        <div class="feature">
+          <div class="badge2 p">Stats</div>
           <h3>Progress dashboard</h3>
-          <p>See accuracy, weak skills, and improvements over time.</p>
-        </div>
-        <div class="feature">
-          <div class="badge2 o">Content</div>
-          <h3>Practical topics</h3>
-          <p>Focus on useful sentences and real-world scenarios you actually need.</p>
+          <p>Track reading time, completion, quiz scores, writing/speaking averages, and personal bests.</p>
         </div>
       </div>
     </section>
@@ -545,29 +604,35 @@
     <!-- HOW IT WORKS -->
     <section id="how" class="card section" aria-label="How it works">
       <h2 class="sectionTitle">How it works</h2>
-      <p class="sectionDesc">Three steps. Short sessions. Real progress.</p>
+      <p class="sectionDesc">A simple loop: discover → learn deeply → test & improve.</p>
 
       <div class="steps">
         <div class="step">
           <div class="num">1</div>
-          <strong>Start & get a baseline</strong>
-          <span>Answer a few quick questions or do a short placement session.</span>
+          <strong>Discover & personalize</strong>
+          <span>Choose topics you like. The system discovers articles and builds recommendations for you.</span>
         </div>
         <div class="step">
           <div class="num">2</div>
-          <strong>Daily adaptive practice</strong>
-          <span>Each session focuses on what you need most, not generic drills.</span>
+          <strong>Learn while reading</strong>
+          <span>Highlights, translation, and wordbook make every article a guided lesson.</span>
         </div>
         <div class="step">
           <div class="num">3</div>
-          <strong>Review & level up</strong>
-          <span>Smart reviews reinforce memory and lock in your progress.</span>
+          <strong>Test & level up</strong>
+          <span>Reading tests + IELTS-style writing and speaking feedback help you improve fast.</span>
         </div>
       </div>
 
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
-        <a class="btn primary" href="https://github.com/yourname/yourrepo" target="_blank" rel="noopener noreferrer">Go to GitHub</a>
-        <a class="btn" href="./Adaptive-English-Teacher-User-Guide.pdf" target="_blank" rel="noopener noreferrer">Read the PDF guide</a>
+      <div class="ctaStrip">
+        <div>
+          <strong>Ready to try it?</strong>
+          <span>Start with the User Guide or run the project from GitHub.</span>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="https://github.com/yourname/yourrepo" target="_blank" rel="noopener noreferrer">Go to GitHub</a>
+          <a class="btn" href="./Adaptive-English-Teacher-User-Guide.pdf" target="_blank" rel="noopener noreferrer">Read the PDF</a>
+        </div>
       </div>
     </section>
 
@@ -576,23 +641,25 @@
       <h2 class="sectionTitle">FAQ</h2>
       <div class="faq">
         <details open>
-          <summary>Is this like Duolingo?</summary>
-          <p>Yes in motivation + streaks + bite-sized practice. But it’s more “teacher-like”: adaptive focus + clearer feedback.</p>
+          <summary>Is this a Duolingo clone?</summary>
+          <p>It’s inspired by the “fun + consistent” vibe, but focuses on deeper learning: real articles, tests, and IELTS-style evaluation.</p>
         </details>
+
         <details>
-          <summary>Where do I start?</summary>
-          <p>Open the PDF guide for installation/usage, or check GitHub for code and examples.</p>
+          <summary>What’s the fastest way to get started?</summary>
+          <p>Open the PDF guide for setup and usage. If you’re technical, run the repo and call the API endpoints directly.</p>
         </details>
+
         <details>
           <summary>Can I host this landing page?</summary>
-          <p>Yes — GitHub Pages / Vercel / Netlify. Put the PDF in the same folder so the relative link works.</p>
+          <p>Yes—GitHub Pages, Vercel, or Netlify. Put the PDF in the same folder so the relative link works.</p>
         </details>
       </div>
     </section>
 
     <footer class="footer">
       <div>© <span id="year"></span> Adaptive English Teacher</div>
-      <div>Built for quick access: <a href="#" id="copyLink2">copy page URL</a></div>
+      <div>Share fast: <a href="#" id="copyLink2">copy page URL</a></div>
     </footer>
   </div>
 
@@ -619,4 +686,3 @@
   </script>
 </body>
 </html>
-
