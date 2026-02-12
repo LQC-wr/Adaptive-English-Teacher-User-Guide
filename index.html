@@ -282,52 +282,6 @@
       border: 2px solid rgba(255,159,28,.18);
       white-space: nowrap;
     }
-    .quickActions{
-      background: rgba(255,255,255,.86);
-      border: 2px solid rgba(7,20,43,.10);
-      border-radius: 18px;
-      padding: 14px;
-      box-shadow: var(--shadow2);
-    }
-    .qaTitle{
-      font-weight: 980;
-      letter-spacing:-.02em;
-      margin-bottom: 10px;
-    }
-    .qaRow{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .qaBtn{
-      appearance: none;
-      border: 2px solid rgba(7,20,43,.10);
-      background: rgba(7,20,43,.04);
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-weight: 950;
-      cursor: pointer;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .qaBtn:hover{
-      transform: translateY(-1px);
-      background: rgba(7,20,43,.06);
-      border-color: rgba(7,20,43,.16);
-    }
-    .qaBtn:active{
-      transform: translateY(0px) scale(.99);
-    }
-    .qaBtn.active{
-      background: rgba(28,125,255,.12);
-      border-color: rgba(28,125,255,.24);
-    }
-    .qaHint{
-      margin-top: 10px;
-      color: rgba(7,20,43,.68);
-      font-weight: 760;
-      font-size: 13px;
-      line-height: 1.4;
-    }
 
     /* Sections */
     .section{
@@ -551,23 +505,27 @@
           <div class="pill"><span class="sq o" aria-hidden="true"></span>Tests & scoring</div>
           <div class="pill"><span class="sq p" aria-hidden="true"></span>Writing & speaking coach</div>
         </div>
+      </div>
 
-        <div class="quickActions" aria-label="Quick feedback">
-          <div class="qaTitle">Quick feedback</div>
-          <div class="qaRow">
-            <button class="qaBtn" type="button" data-action="like" aria-label="Like this article">
-              👍 Like
-            </button>
-            <button class="qaBtn" type="button" data-action="dislike" aria-label="Dislike this article">
-              👎 Dislike
-            </button>
-            <button class="qaBtn" type="button" data-action="bookmark" aria-label="Bookmark this article">
-              🔖 Bookmark
-            </button>
-          </div>
-          <div class="qaHint" id="qaHint">Tell the system what you prefer — recommendations get better.</div>
+      <div class="card heroRight" aria-label="Preview">
+        <div class="bubble">
+          <strong>Today’s progress</strong>
+          <span>Read 3 articles · Saved 12 new words · 1 quiz completed</span>
+        </div>
+        <div class="bubble">
+          <strong>Writing & speaking practice</strong>
+          <span>1 writing review · 1 speaking check · IELTS-style feedback</span>
+        </div>
+        <div class="bubble">
+          <strong>Next up</strong>
+          <span>Recommended article + cloze test + quick vocab review</span>
         </div>
 
+        <div class="progress">
+          <div class="bar" aria-label="progress"><i></i></div>
+          <div class="streak">🔥 7-day streak</div>
+        </div>
+      </div>
     </section>
 
     <!-- FEATURES -->
@@ -732,3 +690,4 @@
   </script>
 </body>
 </html>
+
