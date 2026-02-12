@@ -282,6 +282,52 @@
       border: 2px solid rgba(255,159,28,.18);
       white-space: nowrap;
     }
+    .quickActions{
+      background: rgba(255,255,255,.86);
+      border: 2px solid rgba(7,20,43,.10);
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: var(--shadow2);
+    }
+    .qaTitle{
+      font-weight: 980;
+      letter-spacing:-.02em;
+      margin-bottom: 10px;
+    }
+    .qaRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .qaBtn{
+      appearance: none;
+      border: 2px solid rgba(7,20,43,.10);
+      background: rgba(7,20,43,.04);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .qaBtn:hover{
+      transform: translateY(-1px);
+      background: rgba(7,20,43,.06);
+      border-color: rgba(7,20,43,.16);
+    }
+    .qaBtn:active{
+      transform: translateY(0px) scale(.99);
+    }
+    .qaBtn.active{
+      background: rgba(28,125,255,.12);
+      border-color: rgba(28,125,255,.24);
+    }
+    .qaHint{
+      margin-top: 10px;
+      color: rgba(7,20,43,.68);
+      font-weight: 760;
+      font-size: 13px;
+      line-height: 1.4;
+    }
 
     /* Sections */
     .section{
