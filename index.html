@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Adaptive English Teacher</title>
-  <meta name="description" content="Duolingo-inspired blue landing page for Adaptive English Teacher (Reading, Vocab, Tests, Writing, Speaking, Chat, Stats)." />
+  <meta name="description" content="Professional blue landing page for Adaptive English Teacher (Reading, Vocab, Tests, Writing, Speaking, Chat, Stats)." />
 
   <style>
     :root{
@@ -20,7 +20,7 @@
       --cyan: #22D3EE;
       --orange:#FF9F1C;
       --purple:#7C5CFF;
-      --green:#34D399;
+      --green:#10B981; /* Adjusted to a more professional green */
 
       --shadow: 0 18px 44px rgba(7,20,43,.12);
       --shadow2: 0 10px 22px rgba(7,20,43,.10);
@@ -36,7 +36,7 @@
       background:
         radial-gradient(900px 540px at 12% 8%, rgba(28,125,255,.16), transparent 55%),
         radial-gradient(900px 540px at 88% 10%, rgba(34,211,238,.14), transparent 55%),
-        radial-gradient(900px 540px at 55% 92%, rgba(255,159,28,.12), transparent 55%),
+        radial-gradient(900px 540px at 55% 92%, rgba(16, 185, 129,.12), transparent 55%),
         linear-gradient(180deg, var(--bg), #FFFFFF);
       overflow-x:hidden;
     }
@@ -274,13 +274,18 @@
       background: linear-gradient(90deg, var(--blue), var(--cyan));
       border-radius: 999px;
     }
-    .streak{
+    
+    /* MODIFIED: Professional Style instead of gamified streak */
+    .status-badge{
       font-weight: 950;
-      padding: 8px 10px;
+      padding: 8px 12px;
       border-radius: 14px;
-      background: rgba(255,159,28,.16);
-      border: 2px solid rgba(255,159,28,.18);
+      /* Changed to a clean Green for "Success" vibe */
+      background: rgba(16, 185, 129, .14);
+      border: 2px solid rgba(16, 185, 129, .18);
+      color: #047857;
       white-space: nowrap;
+      font-size: 13px;
     }
 
     /* Sections */
@@ -446,7 +451,6 @@
 
 <body>
   <div class="wrap">
-    <!-- NAV -->
     <header class="nav">
       <a class="brand" href="#">
         <span class="logo" aria-hidden="true"></span>
@@ -462,10 +466,9 @@
       <a class="btn ghost" href="#" id="copyLink">Copy page URL</a>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="card heroLeft">
-        <div class="tag"><span class="dot" aria-hidden="true"></span>Duolingo vibe · Blue theme · Adaptive learning</div>
+        <div class="tag"><span class="dot" aria-hidden="true"></span>Self-Directed Learning · Blue Theme · Adaptive System</div>
 
         <h1>Read. Learn. Test.<br/>Write & Speak.</h1>
 
@@ -478,7 +481,6 @@
         </p>
 
         <div class="heroActions">
-          <!-- TODO: Replace with your GitHub repo link -->
           <a class="btn primary" href="https://github.com/yourname/yourrepo" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -488,7 +490,6 @@
             GitHub Repository
           </a>
 
-          <!-- TODO: Replace with your PDF file name/path -->
           <a class="btn" href="./Adaptive-English-Teacher-User-Guide.pdf" target="_blank" rel="noopener noreferrer">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -523,12 +524,11 @@
 
         <div class="progress">
           <div class="bar" aria-label="progress"><i></i></div>
-          <div class="streak">🔥 7-day streak</div>
+          <div class="status-badge">🎯 Daily Goal Met</div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES -->
     <section id="features" class="card section" aria-label="Features">
       <h2 class="sectionTitle">Core features</h2>
       <p class="sectionDesc">
@@ -575,7 +575,6 @@
       </div>
     </section>
 
-    <!-- ADVANTAGES -->
     <section class="card section" aria-label="Advantages">
       <h2 class="sectionTitle">Why you improve faster</h2>
       <p class="sectionDesc">
@@ -603,7 +602,6 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
     <section id="how" class="card section" aria-label="How it works">
       <h2 class="sectionTitle">How it works</h2>
       <p class="sectionDesc">A simple loop: discover → learn deeply → test & improve.</p>
@@ -632,21 +630,18 @@
           <span>Start with the User Guide or run the project from GitHub.</span>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <!-- TODO: Replace with your GitHub repo link -->
           <a class="btn primary" href="https://github.com/yourname/yourrepo" target="_blank" rel="noopener noreferrer">Go to GitHub</a>
-          <!-- TODO: Replace with your PDF file name/path -->
           <a class="btn" href="./Adaptive-English-Teacher-User-Guide.pdf" target="_blank" rel="noopener noreferrer">Read the PDF</a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="card section" aria-label="FAQ">
       <h2 class="sectionTitle">FAQ</h2>
       <div class="faq">
         <details open>
-          <summary>Is this a Duolingo clone?</summary>
-          <p>It’s inspired by the “fun + consistent” vibe, but focuses on deeper learning: real articles, tests, and IELTS-style evaluation.</p>
+          <summary>How does the "adaptive" part work?</summary>
+          <p>The system analyzes your reading history and vocabulary level to recommend articles that are challenging enough to help you grow, but not so hard that you get frustrated.</p>
         </details>
 
         <details>
@@ -690,4 +685,3 @@
   </script>
 </body>
 </html>
-
